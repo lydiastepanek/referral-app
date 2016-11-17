@@ -5,7 +5,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= link_to 'Clear Sky', root_path, class: 'navbar-brand' %>
+    <% flash.each do |key, value| %>
+      <%= value %>
+    <% end %>
     <%= yield %>
   </body>
-  <div class="body-overlay-2"></div>
 </html>
