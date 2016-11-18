@@ -1,15 +1,19 @@
-class UsersController < ApplicationController
+class UsersController < Clearance::UsersController
   before_action :require_login, only: [:show]
 
+  def create
+    set_referrer
+  end
+
   def show
-    check_for_referral
-    @user = User.find(current_user.id)
-    @referral_link = @user.email
   end
 
   private
 
-  def check_for_referral
-    @refer_token = params[:referToken] if params[:referToken]
+  def set_referrer
+    if params[:referToken]
+      token = URI.unescape(params[:referToken]).html_safe
+      user = User.find_referrer(token)
+    end
   end
 end
