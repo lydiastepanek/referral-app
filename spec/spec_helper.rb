@@ -4,6 +4,9 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require "pry"
 require "shoulda"
+require "clearance/rspec"
+require "clearance/test_unit"
+require 'capybara/rspec'
 # specs live under a `spec` directory, which RSpec adds to the `$LOAD_PATH`.
 # The generated `.rspec` file contains `--require spec_helper` which will cause this
 # file to always be loaded, without a need to explicitly require it in any files.
@@ -66,6 +69,10 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+  Capybara.javascript_driver = :webkit
+  Capybara::Webkit.configure do |config|
+      config.block_unknown_urls
+  end
 
 
 # The settings below are suggested to provide a good initial experience

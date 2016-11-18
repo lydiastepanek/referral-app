@@ -28,6 +28,8 @@ gem 'rspec-rails'
 gem "factory_girl_rails"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem "capybara", "~> 2.4"
+gem 'capybara-webkit', "~> 1.8.0"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
