@@ -202,7 +202,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
-  clearance
+  clearance (~> 1.11)
   coffee-rails (~> 4.1.0)
   factory_girl_rails
   jbuilder (~> 2.0)
