@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   end
 
   def referral_link
-    email
+    "http://localhost:3000/sign_up/?referToken=" + URI.escape(email)
   end
 end

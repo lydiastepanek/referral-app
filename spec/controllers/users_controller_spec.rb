@@ -1,22 +1,23 @@
 require "spec_helper"
 
 describe UsersController, "POST #create" do
-  let(:referrer_user) { build(:user) }
-  let(:referred_user) { build(:user) }
+  let(:existing_user) { create(:user) }
 
-  before do
-  end
-
-  it "redirects to root when user is created" do
+  it "redirects to root on successful creation" do
     post :create, :user => { :email => "user@test.com", :password => "password" }
 
     is_expected.to redirect_to(root_url)
   end
 
-  it "assigns new user appropriate referrer based on params" do
-
-  end
+  # context "successful post" do
+    # it "assigns new user appropriate referrer" do
+      # expect(User.last.referrer).to eq(existing_user)
+    # end
+  # end
 
   it "renders :new when user creation fails" do
+    post :create, :user => { :email => existing_user.email, :password => "password" }
+
+    is_expected.to render_template("users/new")
   end
 end
