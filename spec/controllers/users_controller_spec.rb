@@ -22,6 +22,7 @@ describe UsersController do
     end
 
     it "renders the show template if the user has logged in" do
+      sign_in
       get :show, :user_id => existing_user.id
       is_expected.to render_template(:show)
     end
