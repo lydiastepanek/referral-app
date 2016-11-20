@@ -1,6 +1,11 @@
 class UsersController < Clearance::UsersController
   before_action :require_login, only: [:show]
 
+  def new
+    session[:refer_token] = params[:refer_token] if params[:refer_token]
+    super
+  end
+
   def create
     @user = user_from_params
     set_referrer
@@ -14,11 +19,6 @@ class UsersController < Clearance::UsersController
   end
 
   def show
-  end
-
-  def new
-    session[:refer_token] = params[:refer_token] if params[:refer_token]
-    super
   end
 
   private
