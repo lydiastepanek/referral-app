@@ -16,11 +16,16 @@ class UsersController < Clearance::UsersController
   def show
   end
 
+  def new
+    session[:refer_token] = params[:refer_token] if params[:refer_token]
+    super
+  end
+
   private
 
   def set_referrer
-    if params[:referToken]
-      token = URI.unescape(params[:referToken]).html_safe
+    if session[:refer_token]
+      token = URI.unescape(session[:refer_token]).html_safe
       referrer = User.find_referrer(token)
       @user.referrer = referrer
     end

@@ -11868,12 +11868,12 @@ Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 1.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
@@ -12505,12 +12505,12 @@ Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 1.1ms)
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
@@ -13142,12 +13142,12 @@ Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 1.1ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
@@ -13777,7 +13777,7 @@ Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.1ms)
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.2ms)[0m  BEGIN
 Processing by UsersController#create as HTML
-  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "referToken"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]", "refer_token"=>"[FILTERED]"}}
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.1ms)[0m  BEGIN
@@ -19007,3 +19007,1010 @@ Processing by Clearance::PasswordsController#update as HTML
   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/edit.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 1.1ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/sign_up/?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:18:36 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (16.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 144ms (Views: 101.1ms | ActiveRecord: 2.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/sign_up/?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:19:28 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (18.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (94.9ms)
+Completed 200 OK in 151ms (Views: 110.4ms | ActiveRecord: 2.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/sign_up/?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:19:59 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (17.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (96.5ms)
+Completed 200 OK in 153ms (Views: 113.3ms | ActiveRecord: 2.5ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:19:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$NnMnnvr0i9vdW7.QF7w6IeRALxmDan7ojp8aL3oN51wLF.5xo2y9S"], ["created_at", "2016-11-20 02:22:18.194460"], ["updated_at", "2016-11-20 02:22:18.194460"], ["remember_token", "d23f649f1c4b27b6fb9406441ddd9272a31805f4"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 138837ms (ActiveRecord: 3.3ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "d23f649f1c4b27b6fb9406441ddd9272a31805f4"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 240]]
+  Rendered users/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$o1AY3/JZXZhbO4l.TSli7uNq47NO5n32I9qQ6qxKlEMJ/7i8mEX0q"], ["created_at", "2016-11-20 02:22:18.252144"], ["updated_at", "2016-11-20 02:22:18.252144"], ["remember_token", "fef2a4ff87840853d241d07ac8a63d5281d20426"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$nWDvfwJ0zrP6NdFaztsg5.W4r8EltwlSvZCfFV66Om.eIXKqJe/46"], ["created_at", "2016-11-20 02:22:30.814437"], ["updated_at", "2016-11-20 02:22:30.814437"], ["remember_token", "fe037ef4f40455f41b6f0a1a718330c42f36de95"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up/?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:22:30 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (15.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 70ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:22:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$A6qWo8wz0D2ImNiZ0zoJ/O/zJvGTLhiobwaAoU9OEkv9n4SJXeSmi"], ["created_at", "2016-11-20 02:23:12.272818"], ["updated_at", "2016-11-20 02:23:12.272818"], ["remember_token", "481ab295f7062d79ab126c23a12ace977ab95feb"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up/?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:23:12 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (15.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 68ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:23:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$KREUd5J/96Y7p1H5arIoCeh5Uran.kA97Oj2gKr2EYMS9XSRrnUA2"], ["created_at", "2016-11-20 02:27:23.323823"], ["updated_at", "2016-11-20 02:27:23.323823"], ["remember_token", "72f8c241c9fbfd9305a7ad0f0936f107e0fcabb6"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 250890ms (ActiveRecord: 2.3ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "72f8c241c9fbfd9305a7ad0f0936f107e0fcabb6"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 244]]
+  Rendered users/show.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 102ms (Views: 92.6ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$zlAjXj/n10VMTC4B05Lcme9SR.ol8xDGLxYiWlaquAGZ7bki5Tq6O"], ["created_at", "2016-11-20 02:27:29.677086"], ["updated_at", "2016-11-20 02:27:29.677086"], ["remember_token", "7a24a01723275d3789d0fee2188ee165f4f7b4d6"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:27:29 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (11.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 66ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:27:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$FFzGoJD.wMxX0mPbdqPyke9Q87gS3OkrBWTfDaFEfrH06xpXrjLne"], ["created_at", "2016-11-20 02:28:25.878432"], ["updated_at", "2016-11-20 02:28:25.878432"], ["remember_token", "eb6c60fcda269c0aaafcda51284a0620fdecd7b9"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 56040ms (ActiveRecord: 1.1ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "eb6c60fcda269c0aaafcda51284a0620fdecd7b9"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 246]]
+  Rendered users/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 46ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$NJ7f1.JFESCJJR8tzonvgOns27SlOFWlZCLA8/8.Ij8KMYQEmEl9G"], ["created_at", "2016-11-20 02:34:47.345167"], ["updated_at", "2016-11-20 02:34:47.345167"], ["remember_token", "0832fefc8af6a3bb0c54638b0b181d3d883a3055"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:34:47 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (11.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 64ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:34:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$g4XBquxCitQuQZG8Q4RsOuv4qaH7bWwEmzv7UFHGP7u73Cc7ReoB2"], ["created_at", "2016-11-20 02:38:35.717239"], ["updated_at", "2016-11-20 02:38:35.717239"], ["remember_token", "439630fc289d6d5672435a136214563086339bb9"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 228217ms (ActiveRecord: 1.6ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "439630fc289d6d5672435a136214563086339bb9"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 248]]
+  Rendered users/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 31ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$k9EZDqkgJ6iIYs9jq0fXzOOQ3CbEAdAx4QMxMlCEpMp67KljBBv1G"], ["created_at", "2016-11-20 02:38:48.577850"], ["updated_at", "2016-11-20 02:38:48.577850"], ["remember_token", "df67eda6cd7aeffa97e87ff5089ac7fd3b3f11c2"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:38:48 -0500
+Processing by Clearance::UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (11.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 66ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:38:48 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$NG6tMDqE7DazxczdFkXhquLDZLSB1/xi4tgQCbbcPHTTiSduUeCQ2"], ["created_at", "2016-11-20 02:38:48.749305"], ["updated_at", "2016-11-20 02:38:48.749305"], ["remember_token", "d2a54dc2ec690babf9b8a222e454b1f69f9ff52b"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:38:48 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "d2a54dc2ec690babf9b8a222e454b1f69f9ff52b"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 250]]
+  Rendered users/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 27ms (Views: 20.5ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$VWR6rW3u6a1FveRlGpakMOKpchovxw5x7QhQNeHEE61esGSUGNsY2"], ["created_at", "2016-11-20 02:39:20.536373"], ["updated_at", "2016-11-20 02:39:20.536373"], ["remember_token", "409dd69309d3b0449e395efc396428172ac283fd"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:39:20 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (12.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (96.5ms)
+Completed 200 OK in 28855ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$ZNWSOn/sRaOoWmQI5hTfTOMIbiZclP7FYHlg/Rteb5swoAPW/MFgy"], ["created_at", "2016-11-20 02:39:49.492464"], ["updated_at", "2016-11-20 02:39:49.492464"], ["remember_token", "7d61e822df7837977e31621a59e1f06179b6a0af"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "7d61e822df7837977e31621a59e1f06179b6a0af"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 252]]
+  Rendered users/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$VazqoauYzYQw9KOzZsgam.1.2VI/SOTfvbi/WaLXm1dVrkO/W3yAC"], ["created_at", "2016-11-20 02:41:32.595493"], ["updated_at", "2016-11-20 02:41:32.595493"], ["remember_token", "5105d2c973bfd20afc885b952ffe3b9d52febc67"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:41:32 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (12.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 61ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:41:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$nN9NuYB1aK4BeEVU48hN6uvJd299hMB10yd4Qygv3cl5xwQgxZe66"], ["created_at", "2016-11-20 02:41:49.253708"], ["updated_at", "2016-11-20 02:41:49.253708"], ["remember_token", "a6112f8520bf0c941b149e997c0fdccb475f7e26"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 16506ms (ActiveRecord: 1.1ms)
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "a6112f8520bf0c941b149e997c0fdccb475f7e26"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 254]]
+  Rendered users/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$IP2oIxZaQC/OTBLuGm6SReJeAaeJfp6kNR1oBlEc7c/IKhxVd2mBi"], ["created_at", "2016-11-20 02:42:10.924342"], ["updated_at", "2016-11-20 02:42:10.924342"], ["remember_token", "247bb2cd3f82ba5701e80f84bd417be47f1d866c"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:42:10 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (12.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 72ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:42:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user1@example.com"]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "referrer_id", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$abkQDjVJVyDiLdvtBAVX4uEwyFiucG4rDF20ibEJbX3V2EZPEisyK"], ["referrer_id", 255], ["created_at", "2016-11-20 02:42:38.549662"], ["updated_at", "2016-11-20 02:42:38.549662"], ["remember_token", "e0cdad08a0357db7cfa37f7ff7d3bd3887d51d07"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 27457ms (ActiveRecord: 2.3ms)
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "e0cdad08a0357db7cfa37f7ff7d3bd3887d51d07"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 256]]
+  Rendered users/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 255]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$npEtoyUnXG6xz6V9blM3Z.FBAGW5GqR8XmJ4ZNfb/AGHaIKMzxVpy"], ["created_at", "2016-11-20 02:42:43.158338"], ["updated_at", "2016-11-20 02:42:43.158338"], ["remember_token", "9120a6f48b5745f3f1b2f14138d0ad54df04a763"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:42:43 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (14.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 63ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:42:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user1@example.com"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "referrer_id", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$eFKv0NjffM1BZgKlZ7yRv.IugMEMSj7YpMLLY8rfmY9a7/wP1aGMK"], ["referrer_id", 257], ["created_at", "2016-11-20 02:42:43.334640"], ["updated_at", "2016-11-20 02:42:43.334640"], ["remember_token", "007793bb7d9bbaae9f7d0604c9dd5432ec32dd70"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 20ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:42:43 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "007793bb7d9bbaae9f7d0604c9dd5432ec32dd70"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 258]]
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 257]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$6nOYKyRA7iK4cMISrLxmFOk7NG7mf5dHYJ2UIvSwhJT1yMOeyNHwS"], ["created_at", "2016-11-20 02:58:52.255603"], ["updated_at", "2016-11-20 02:58:52.255603"], ["remember_token", "cabd91e496870d28f5a4b00354ac2276f43dede4"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:58:52 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (14.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 63ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:58:52 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user1@example.com"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "referrer_id", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$iFm9qk2v5WodXTZfDrTAKe9wcZhZiyo52ch7d4wUQuIYt34rjOtua"], ["referrer_id", 259], ["created_at", "2016-11-20 02:58:52.428840"], ["updated_at", "2016-11-20 02:58:52.428840"], ["remember_token", "7b8ccbf30d8e96cde43c04ab0535badc5bcfab8b"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 1.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:58:52 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "7b8ccbf30d8e96cde43c04ab0535badc5bcfab8b"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 260]]
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 259]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 259]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@test.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user@test.com"], ["encrypted_password", "$2a$04$RBYuVxs5/wpgQb1Zv4SxfOQTE2VpgVR8/FFZZ6mXvPYsrxF0eDE/2"], ["created_at", "2016-11-20 02:59:07.000252"], ["updated_at", "2016-11-20 02:59:07.000252"], ["remember_token", "3f5e75db87514e7bc6c14ce8dd16bc86efd35125"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 99ms (ActiveRecord: 4.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$04$w6gaKk7kTSPJQ77tvUu.Z.CNO4h6/XkD3502p1CfPnW45KxVN8VK6"], ["created_at", "2016-11-20 02:59:07.012199"], ["updated_at", "2016-11-20 02:59:07.012199"], ["remember_token", "597d384b1388f54d323cf5caba3b31e57e91500b"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "user2@example.com"], ["encrypted_password", "$2a$04$FWkDKW.Rn9GdnYlkNfGJne7RNI26TkUwN8G/msu5IDZduEbHLt1ga"], ["created_at", "2016-11-20 02:59:07.051848"], ["updated_at", "2016-11-20 02:59:07.051848"], ["remember_token", "d578e83d7409d46aff949cd701f876f336eb25b6"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (15.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 54ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "user2@example.com"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 66ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "d578e83d7409d46aff949cd701f876f336eb25b6"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 263]]
+  Rendered users/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "d578e83d7409d46aff949cd701f876f336eb25b6"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "f0ab835cc70d39f5e9941f94b13de6cebc76ad78"], ["updated_at", "2016-11-20 02:59:07.228900"], ["id", 263]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/sign_in
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user3@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user3@example.com"], ["encrypted_password", "$2a$04$AooTsv1bZqq4u1tG.qCmK.2RbWmAc1AkGLTfIN674XtAvYNc94Tl2"], ["created_at", "2016-11-20 02:59:07.294988"], ["updated_at", "2016-11-20 02:59:07.294988"], ["remember_token", "e5e4fbad8aa4e867fc37a5ee0d602bd23f86eaff"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started POST "/passwords" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "user3@example.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "confirmation_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmation_token", "4356aadd53504b1307c1898bfda2c92b3517d909"], ["updated_at", "2016-11-20 02:59:07.306194"], ["id", 264]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+[ActiveJob]   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 264]]
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319] Performing ActionMailer::DeliveryJob from Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/264
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.html.erb (1.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.text.erb (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319] 
+ClearanceMailer#change_password: processed outbound mail in 273.6ms
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319] 
+Sent mail to user3@example.com (13.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319] Date: Sat, 19 Nov 2016 21:59:07 -0500
+From: reply@example.com
+To: user3@example.com
+Message-ID: <5831117b94035_3a123fe6dd052450746c1@Lydias-MacBook-Air.local.mail>
+Subject: Change your password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5831117b91ff7_3a123fe6dd0524507454e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5831117b91ff7_3a123fe6dd0524507454e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Someone, hopefully you, requested we send you a link to change your password:
+
+http://localhost:3000/users/264/password/edit?token=4356aadd53504b1307c1898bfda2c92b3517d909
+
+If you didn't request this, ignore this email. Your password has not been changed.
+
+----==_mimepart_5831117b91ff7_3a123fe6dd0524507454e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Someone, hopefully you, requested we send you a link to change your password:</p>
+
+<p>
+  <a href="http://localhost:3000/users/264/password/edit?token=4356aadd53504b1307c1898bfda2c92b3517d909">Change my password</a>
+</p>
+
+<p>If you didn't request this, ignore this email. Your password has not been changed.</p>
+
+----==_mimepart_5831117b91ff7_3a123fe6dd0524507454e--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [11e524fd-358e-4b23-aed0-20afb523a319] Performed ActionMailer::DeliveryJob from Inline(mailers) in 287.96ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 11e524fd-358e-4b23-aed0-20afb523a319) to Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/264
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 312ms (Views: 3.3ms | ActiveRecord: 1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 264]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/passwords" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "unknown.email@example.com"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/create.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "user@example.com"], ["encrypted_password", "$2a$04$wfW9x6NyDPH3IjFmordWXeugpPFGV6Gfc3L69xLRcMndv1XY41nai"], ["created_at", "2016-11-20 02:59:07.702598"], ["updated_at", "2016-11-20 02:59:07.702598"], ["remember_token", "f73ceb770af5bad3ea5f59400508e448cd29d4f1"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "user@example.com"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "f73ceb770af5bad3ea5f59400508e448cd29d4f1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 265]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "f73ceb770af5bad3ea5f59400508e448cd29d4f1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 265]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user.name@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user.name@example.com"], ["encrypted_password", "$2a$04$Ng3nShhEIAefai.J76IG1Oq8ECqGrUnabkl17ZUej1miKehpFqvNK"], ["created_at", "2016-11-20 02:59:07.734350"], ["updated_at", "2016-11-20 02:59:07.734350"], ["remember_token", "95853eb87a5dce34487c677e24fe89e717224abf"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"User.Name@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "user.name@example.com"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "95853eb87a5dce34487c677e24fe89e717224abf"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 266]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "95853eb87a5dce34487c677e24fe89e717224abf"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 266]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "user@example.com"], ["encrypted_password", "$2a$04$9ZklKsr2wGRDePMX5Ltg2OBVd8equGyF2YoJ523ZFKari5o346Z3a"], ["created_at", "2016-11-20 02:59:07.765788"], ["updated_at", "2016-11-20 02:59:07.765788"], ["remember_token", "32af92ca677d0feb975ec30bd2111be65fa5ac8a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "user@example.com"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"unknown.email@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "unknown.email@example.com"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 401 Unauthorized in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started GET "/sign_up" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/sign_up" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"valid@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'valid@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "valid@example.com"], ["encrypted_password", "$2a$04$1W6VXQsvDsRk7LrIiMAAyOw3HUnb3kxq/Mz40JTR5XTs5.oprldJC"], ["created_at", "2016-11-20 02:59:07.839906"], ["updated_at", "2016-11-20 02:59:07.839906"], ["remember_token", "913cf10032d39bd8a9663d973e9df0109ff8eb0c"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "913cf10032d39bd8a9663d973e9df0109ff8eb0c"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 268]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "913cf10032d39bd8a9663d973e9df0109ff8eb0c"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 268]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/sign_up" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"invalid_email", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'invalid_email' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/sign_up" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"valid@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'valid@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user4@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "user4@example.com"], ["encrypted_password", "$2a$04$Wi0ETfTgR7YrOI/4CCJVHuyDhzSnuBhPC1CrD6WCk00ylUqEPf3YG"], ["created_at", "2016-11-20 02:59:07.896212"], ["updated_at", "2016-11-20 02:59:07.896212"], ["remember_token", "d3b4589b18d7ec97ec77f25c1247dc179245e628"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started POST "/passwords" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Reset password"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "user4@example.com"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "confirmation_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"], ["updated_at", "2016-11-20 02:59:07.906017"], ["id", 269]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob]   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 269]]
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917] Performing ActionMailer::DeliveryJob from Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/269
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.html.erb (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.text.erb (0.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917] 
+ClearanceMailer#change_password: processed outbound mail in 4.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917] 
+Sent mail to user4@example.com (3.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917] Date: Sat, 19 Nov 2016 21:59:07 -0500
+From: reply@example.com
+To: user4@example.com
+Message-ID: <5831117bf0e53_3a123fe6dd0524507483c@Lydias-MacBook-Air.local.mail>
+Subject: Change your password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5831117bf0581_3a123fe6dd05245074759";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5831117bf0581_3a123fe6dd05245074759
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Someone, hopefully you, requested we send you a link to change your password:
+
+http://localhost:3000/users/269/password/edit?token=1718c4048e4ed6e49547e6a42c0b97eb7704bb86
+
+If you didn't request this, ignore this email. Your password has not been changed.
+
+----==_mimepart_5831117bf0581_3a123fe6dd05245074759
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Someone, hopefully you, requested we send you a link to change your password:</p>
+
+<p>
+  <a href="http://localhost:3000/users/269/password/edit?token=1718c4048e4ed6e49547e6a42c0b97eb7704bb86">Change my password</a>
+</p>
+
+<p>If you didn't request this, ignore this email. Your password has not been changed.</p>
+
+----==_mimepart_5831117bf0581_3a123fe6dd05245074759--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [3769947b-cc4c-44d4-bf37-27c270e1d917] Performed ActionMailer::DeliveryJob from Inline(mailers) in 78.3ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 3769947b-cc4c-44d4-bf37-27c270e1d917) to Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/269
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 86ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 269]]
+Started GET "/users/269/password/edit?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:07 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"token"=>"[FILTERED]", "user_id"=>"269"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", 269], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", "269"], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+Redirected to http://www.example.com/users/269/password/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/users/269/password/edit" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"user_id"=>"269"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", 269], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", "269"], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+Started PUT "/users/269/password?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "password_reset"=>"[FILTERED]", "commit"=>"Save this password", "token"=>"[FILTERED]", "user_id"=>"269"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", 269], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", "269"], ["confirmation_token", "1718c4048e4ed6e49547e6a42c0b97eb7704bb86"]]
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user4@example.com' AND "users"."id" != 269) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user4@example.com' AND "users"."id" != 269) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "encrypted_password" = $1, "confirmation_token" = $2, "remember_token" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["encrypted_password", "$2a$04$W4whZx.Q4Utkn0OlJ0rJnuTNqNZFGnIlx5ecBb5QPJgrBwvIF8bl6"], ["confirmation_token", nil], ["remember_token", "f9b87aafa05f9792a9058a27c427b2f25fc3a265"], ["updated_at", "2016-11-20 02:59:08.032896"], ["id", 269]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "f9b87aafa05f9792a9058a27c427b2f25fc3a265"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 269]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "f9b87aafa05f9792a9058a27c427b2f25fc3a265"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 269]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user5@example.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user5@example.com"], ["encrypted_password", "$2a$04$V4Qjo2D05Ov85umZhpRDZePtONNToPsGPbheQQ0CFGWthJGqMoWc2"], ["created_at", "2016-11-20 02:59:08.052784"], ["updated_at", "2016-11-20 02:59:08.052784"], ["remember_token", "3c617379a24d8f13a6952cd658f787f24165807c"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started POST "/passwords" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "user5@example.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "confirmation_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"], ["updated_at", "2016-11-20 02:59:08.061316"], ["id", 270]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+[ActiveJob]   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 270]]
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969] Performing ActionMailer::DeliveryJob from Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/270
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.html.erb (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.text.erb (0.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969] 
+ClearanceMailer#change_password: processed outbound mail in 2.7ms
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969] 
+Sent mail to user5@example.com (3.3ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969] Date: Sat, 19 Nov 2016 21:59:08 -0500
+From: reply@example.com
+To: user5@example.com
+Message-ID: <5831117c1103e_3a123fe6dd0524507504d@Lydias-MacBook-Air.local.mail>
+Subject: Change your password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5831117c10825_3a123fe6dd052450749aa";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5831117c10825_3a123fe6dd052450749aa
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Someone, hopefully you, requested we send you a link to change your password:
+
+http://localhost:3000/users/270/password/edit?token=0806489a1041ee8fda7d7447700f2a819ef8cb3b
+
+If you didn't request this, ignore this email. Your password has not been changed.
+
+----==_mimepart_5831117c10825_3a123fe6dd052450749aa
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Someone, hopefully you, requested we send you a link to change your password:</p>
+
+<p>
+  <a href="http://localhost:3000/users/270/password/edit?token=0806489a1041ee8fda7d7447700f2a819ef8cb3b">Change my password</a>
+</p>
+
+<p>If you didn't request this, ignore this email. Your password has not been changed.</p>
+
+----==_mimepart_5831117c10825_3a123fe6dd052450749aa--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [b1ea0c69-ce32-49ba-983c-65a997ad0969] Performed ActionMailer::DeliveryJob from Inline(mailers) in 6.44ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: b1ea0c69-ce32-49ba-983c-65a997ad0969) to Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/270
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 270]]
+Started GET "/users/270/password/edit?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"token"=>"[FILTERED]", "user_id"=>"270"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 270], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "270"], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+Redirected to http://www.example.com/users/270/password/edit
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+Started GET "/users/270/password/edit" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"user_id"=>"270"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 270], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "270"], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+Started PUT "/users/270/password?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "password_reset"=>"[FILTERED]", "commit"=>"Save this password", "token"=>"[FILTERED]", "user_id"=>"270"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 270], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "270"], ["confirmation_token", "0806489a1041ee8fda7d7447700f2a819ef8cb3b"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user5@example.com' AND "users"."id" != 270) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user5@example.com' AND "users"."id" != 270) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "encrypted_password" = $1, "confirmation_token" = $2, "remember_token" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["encrypted_password", "$2a$04$vHJ19s9ZF12qZKjiV9UiwupAMPL.1UAu1fmIZEQknl1mMOB88jI1y"], ["confirmation_token", nil], ["remember_token", "47b7bd7eb46c2153fdfd5d37d6cd045cb9d83158"], ["updated_at", "2016-11-20 02:59:08.091654"], ["id", 270]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "47b7bd7eb46c2153fdfd5d37d6cd045cb9d83158"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 270]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+Started DELETE "/sign_out" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "47b7bd7eb46c2153fdfd5d37d6cd045cb9d83158"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_token", "18a1b1f4dff281d5506c758f4172e0f1165a3629"], ["updated_at", "2016-11-20 02:59:08.103801"], ["id", 270]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started GET "/sign_in" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/session" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"user5@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "user5@example.com"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "18a1b1f4dff281d5506c758f4172e0f1165a3629"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 270]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["remember_token", "18a1b1f4dff281d5506c758f4172e0f1165a3629"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 270]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user6@example.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user6@example.com"], ["encrypted_password", "$2a$04$A23oBfB5HN.EoJgpabbVFOvBI/P8aDegJpL0ezeXogIr0b91iTexW"], ["created_at", "2016-11-20 02:59:08.135313"], ["updated_at", "2016-11-20 02:59:08.135313"], ["remember_token", "4e06f49ef895cb74dadfedceb00eab2c0616f5ec"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/passwords/new" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#new as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/passwords" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "password"=>"[FILTERED]", "commit"=>"Reset password"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "user6@example.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "confirmation_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"], ["updated_at", "2016-11-20 02:59:08.143169"], ["id", 271]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+[ActiveJob]   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 271]]
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3] Performing ActionMailer::DeliveryJob from Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/271
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.html.erb (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3]   Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/clearance_mailer/change_password.text.erb (0.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3] 
+ClearanceMailer#change_password: processed outbound mail in 3.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3] 
+Sent mail to user6@example.com (3.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3] Date: Sat, 19 Nov 2016 21:59:08 -0500
+From: reply@example.com
+To: user6@example.com
+Message-ID: <5831117c24fbd_3a123fe6dd052450752fd@Lydias-MacBook-Air.local.mail>
+Subject: Change your password
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5831117c247b5_3a123fe6dd05245075176";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5831117c247b5_3a123fe6dd05245075176
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Someone, hopefully you, requested we send you a link to change your password:
+
+http://localhost:3000/users/271/password/edit?token=aa18ff6fdd7083d742c701afbe4c99a68b86506b
+
+If you didn't request this, ignore this email. Your password has not been changed.
+
+----==_mimepart_5831117c247b5_3a123fe6dd05245075176
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Someone, hopefully you, requested we send you a link to change your password:</p>
+
+<p>
+  <a href="http://localhost:3000/users/271/password/edit?token=aa18ff6fdd7083d742c701afbe4c99a68b86506b">Change my password</a>
+</p>
+
+<p>If you didn't request this, ignore this email. Your password has not been changed.</p>
+
+----==_mimepart_5831117c247b5_3a123fe6dd05245075176--
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f0388d58-8bf6-4258-8687-4a33d38681a3] Performed ActionMailer::DeliveryJob from Inline(mailers) in 6.91ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: f0388d58-8bf6-4258-8687-4a33d38681a3) to Inline(mailers) with arguments: "ClearanceMailer", "change_password", "deliver_now", gid://referrals-app/User/271
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 271]]
+Started GET "/users/271/password/edit?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"token"=>"[FILTERED]", "user_id"=>"271"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 271], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "271"], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+Redirected to http://www.example.com/users/271/password/edit
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/271/password/edit" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#edit as HTML
+  Parameters: {"user_id"=>"271"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 271], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "271"], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+Started PUT "/users/271/password?token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by Clearance::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "password_reset"=>"[FILTERED]", "commit"=>"Save this password", "token"=>"[FILTERED]", "user_id"=>"271"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1[0m  [["id", 271], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 AND "users"."confirmation_token" = $2 LIMIT 1  [["id", "271"], ["confirmation_token", "aa18ff6fdd7083d742c701afbe4c99a68b86506b"]]
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user6@example.com' AND "users"."id" != 271) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'user6@example.com' AND "users"."id" != 271) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/passwords/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 1.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user7@example.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "user7@example.com"], ["encrypted_password", "$2a$04$4Y2lFcGx1gV4rEJd9sMJtuh33jC0sEvdZzcMgT3h7nG0Sv2jIW7Aq"], ["created_at", "2016-11-20 02:59:08.186809"], ["updated_at", "2016-11-20 02:59:08.186809"], ["remember_token", "8aa4a343bbc544a339bef23b7c396bf526755c64"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/sign_up?refer_token=[FILTERED]" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"refer_token"=>"[FILTERED]"}
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/_form.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/clearance-1.15.1/app/views/users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"new_user@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user7@example.com"]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'new_user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "referrer_id", "created_at", "updated_at", "remember_token") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["email", "new_user@example.com"], ["encrypted_password", "$2a$04$yg4CTbopL7rBjsV9vvPSVuddpbgOOc57tERyUS1PlU8T8bkIoUNSa"], ["referrer_id", 272], ["created_at", "2016-11-20 02:59:08.217154"], ["updated_at", "2016-11-20 02:59:08.217154"], ["remember_token", "ce44e01b360a376660b180165533167dac553b4b"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 24ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2016-11-19 21:59:08 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["remember_token", "ce44e01b360a376660b180165533167dac553b4b"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1[0m  [["referrer_id", 273]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 272]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."referrer_id" = $1  [["referrer_id", 272]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
