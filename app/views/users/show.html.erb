@@ -1,4 +1,8 @@
 <h1>Welcome!</h1>
-<div>Here is your referral link: <%= request.base_url %>/sign_up?refer_code=<%= current_user.referral_code %></div>
+<div>Here is your referral link:
+  <span id="referral-link">
+    <%= request.base_url %>/sign_up?refer_code=<%= current_user.referral_code %>
+  </span>
+</div>
 <div>Share it with others!</div>
 <div>Number of friends referred: <%= current_user.referrals.count %></div>

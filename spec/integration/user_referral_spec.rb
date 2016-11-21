@@ -15,5 +15,9 @@ RSpec.feature "user referral", :type => :feature do
     it "assigns the appropriate referrer" do
       expect(User.last.referrer).to eq(existing_user)
     end
+
+    it "attributes the new user to the existing user" do
+      expect(existing_user.referrals.count).to eq(1)
+    end
   end
 end
