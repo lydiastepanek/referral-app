@@ -1,14 +1,15 @@
 require "spec_helper"
 
 describe User do
-  subject { build(:user, :email => "example@test.com") }
+  subject { create(:user) }
 
   it { is_expected.to have_many :referrals }
   it { is_expected.to belong_to :referrer }
 
-  describe "referral link" do
-    it "contains the user's referral code" do
-      expect(subject.referral_link).to eq("/sign_up?refer_token=example@test.com")
+  describe "referral code" do
+    it "encodes the user's id" do
+      expected_code = Hashids.new.encode(subject.id)
+      expect(subject.referral_code).to eq(expected_code)
     end
   end
 end

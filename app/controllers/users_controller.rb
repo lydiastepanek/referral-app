@@ -2,7 +2,7 @@ class UsersController < Clearance::UsersController
   before_action :require_login, only: [:show]
 
   def new
-    session[:refer_token] = params[:refer_token] if params[:refer_token]
+    session[:refer_code] = params[:refer_code] if params[:refer_code]
     super
   end
 
@@ -24,9 +24,9 @@ class UsersController < Clearance::UsersController
   private
 
   def set_referrer
-    if session[:refer_token]
-      token = URI.unescape(session[:refer_token]).html_safe
-      referrer = User.find_referrer(token)
+    if session[:refer_code]
+      refer_code = session[:refer_code]
+      referrer = User.find_referrer(refer_code)
       @user.referrer = referrer
     end
   end
