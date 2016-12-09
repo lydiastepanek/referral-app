@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   def self.find_referrer(refer_code)
     referrer_id = Hashids.new.decode(refer_code).first
-    self.find(referrer_id)
+    self.find_by_id(referrer_id)
   end
 
   def referral_code

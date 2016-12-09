@@ -27,7 +27,7 @@ class UsersController < Clearance::UsersController
     if session[:refer_code]
       refer_code = session[:refer_code]
       referrer = User.find_referrer(refer_code)
-      @user.referrer = referrer
+      referrer && @user.referrer = referrer
     end
   end
 end
